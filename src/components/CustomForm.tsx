@@ -1,17 +1,9 @@
 import React from "react";
-import {
-  Button,
-  TextInput,
-  View,
-  Text,
-  ScrollView,
-  StyleSheet,
-} from "react-native";
+import { View, Text, ScrollView, StyleSheet } from "react-native";
 import { Formik, ErrorMessage } from "formik";
 import { InfoTile } from "./InfoTile";
 import { CustomButton } from "./CustomButton";
 import { FormField } from "./FormField";
-import { useNavigation } from "@react-navigation/native";
 import { DisplayPicture } from "../components/DisplayPicture";
 import { useState } from "react";
 

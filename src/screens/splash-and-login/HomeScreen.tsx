@@ -1,15 +1,13 @@
 import { View, Image, StyleSheet } from "react-native";
 import { CustomButton } from "../../components/CustomButton";
-import { useNavigation } from "@react-navigation/native";
+import { ParamListBase, useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 export function HomeScreen() {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
   return (
     <View style={styles.container}>
-      <Image
-        source={require("../../assets/momo-sa-khang.png")}
-        style={styles.image}
-      />
+      <Image source={require("../../assets/logo.png")} style={styles.image} />
       <CustomButton
         text="Get started"
         handlePress={() => navigation.navigate("Login")}

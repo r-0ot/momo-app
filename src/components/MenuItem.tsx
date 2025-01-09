@@ -5,7 +5,17 @@ import {
   StyleSheet,
   ImageBackground,
   TouchableOpacity,
+  ImageSourcePropType,
 } from "react-native";
+
+interface MenuItemProps {
+  title: string;
+  imageSource: ImageSourcePropType;
+  handlePress: () => void;
+  width: number;
+  height: number;
+  logo?: boolean;
+}
 
 export function MenuItem({
   title,
@@ -14,7 +24,7 @@ export function MenuItem({
   width,
   height,
   logo = true,
-}) {
+}: MenuItemProps) {
   return (
     <ImageBackground
       source={imageSource}
@@ -24,10 +34,7 @@ export function MenuItem({
       <View style={styles.overlay} />
       <TouchableOpacity style={styles.content} onPress={handlePress}>
         {logo ? (
-          <Image
-            source={require("../assets/momo-removebg.png")}
-            style={styles.image}
-          />
+          <Image source={require("../assets/logo.png")} style={styles.image} />
         ) : (
           <View style={styles.image}></View>
         )}

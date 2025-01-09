@@ -40,7 +40,7 @@ export function SignUp() {
       .max(20, "Username must not exceed 20 characters")
       .matches(
         /^[a-zA-Z0-9_]+$/,
-        "Username can only contain letters, numbers, and underscores",
+        "Username can only contain letters, numbers, and underscores"
       ), // Alphanumeric and underscores only
 
     email: yup
@@ -98,7 +98,7 @@ export function SignUp() {
   return (
     <View style={styles.container}>
       <Image
-        source={require("../../assets/momo-sa-khang.png")}
+        source={require("../../assets/logo.png")}
         style={{ width: 343, height: 255 }}
       />
       <Text style={styles.title}>Create an Account</Text>

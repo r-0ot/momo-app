@@ -8,7 +8,7 @@ import {
   bankFormFields,
   bankValidationSchema,
 } from "../constants";
-import { calculateAge } from "../utils.ts";
+import { calculateAge } from "../utils";
 import axios from "axios";
 
 export function EditEmployee({ route }) {
